@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Contact() {
   return (
-    <div className="bg-[#0A0A0A] flex justify-center items-center px-4 py-8">
+    <div className=" flex justify-center items-center px-4 py-8">
       <div className="flex gap-6">
         <a
           href="https://www.github.com/the-akemsingh/"

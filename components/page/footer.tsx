@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-      <div className="flex flex-col sm:flex-row p-4 justify-center gap-4 bg-[#0A0A0A] text-white">
+      <div className=" flex flex-col sm:flex-row p-14 justify-center gap-4  text-white">
         <div>
           Designed using <a target="_blank" href="https://ui.aceternity.com/" className="text-red-300 hover:underline">Aceternity UI</a>
         </div>

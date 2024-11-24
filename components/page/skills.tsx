@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function Skills() {
   return (
-    <div className="bg-[#0A0A0A] flex flex-col pt-16 pb-16 text-white">
+    <div className="pl-8 ml-28 flex flex-col pt-16 pb-16 text-white">
       <div className="text-3xl sm:text-4xl pl-8">SKILLS</div>
       <div className="pl-8 mt-4 text-lg sm:text-xl">A list of my technical proficiencies.</div>
-      <div className="pl-8 flex flex-wrap justify-center gap-4 mt-8">
+      <div className="flex flex-wrap justify-center gap-4 mt-8">
         {[
           { src: "/images/cpp.svg", alt: "c++", label: "C++" },
           { src: "/images/js.svg", alt: "javaScript", label: "JavaScript" },
@@ -22,7 +22,7 @@ export default function Skills() {
           { src: "/images/github.svg", alt: "github", label: "GitHub" },
           { src: "/images/postman.svg", alt: "postman", label: "Postman" }
         ].map(({ src, alt, label }) => (
-          <div key={alt} className="relative group flex items-center justify-center">
+          <div key={alt} className="relative  group flex items-center justify-center">
             <Image
               src={src}
               alt={alt}
