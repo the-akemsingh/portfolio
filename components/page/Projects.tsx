@@ -1,253 +1,179 @@
-import Image from "next/image";
-import { Timeline } from "@/components/ui/timeline";
+'use client'
 
-export default function ProjectTimeline() {
-  const data = [
-    {
-      title: "BachEats",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 font-bold text-xs md:text-sm  mb-4">
-            People can connect with others over a meal
-          </p>
-          <div className="mb-8 gap-3">
-            <p className=" gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Share your meal with peoples nearby
-            </p>
-            <p className="text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Or join someone else for a meal
-            </p>
-            <a
-              href="https://bach-eats.vercel.app/"
-              target="_blank"
-              className="inline-flex items-center mt-6 gap-1 mr-3 text-blue-500 hover:underline"
-            ><Image src={`/images/icons8-link-50.png`} width={20} height={20} alt="link" ></Image>
-              LINK
-            </a>
-            <a
-              href="https://github.com/the-akemsingh/Bach_Eats"
-              target="_blank"
-              className="inline-flex items-center gap-1 text-blue-500 dark:text-gray-300 hover:underline"
-            >
-              <Image className="mt-6" src={`/images/icons8-github-30.png`} width={20} height={20} alt="link" ></Image>
-              <p className="mt-6">GITHUB</p>
-            </a>
-          </div>
+import { motion } from 'framer-motion'
+import { ExternalLink, Github } from 'lucide-react'
+import Link from 'next/link'
+import Image from 'next/image'
 
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src={`/images/BEhome.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src={`/images/BEsignup.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src={`/images/BEinvite.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src={`/images/BEcreateinvite.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Above Medium",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 font-bold text-xs md:text-sm  mb-4">Blogging website </p>
-          <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal  gap-3  mb-8">
-            <p className="">
-              ✅ User sign-up using email </p>
-            <p className="">
-              ✅ User has the functionality to post and view blogs posted by other users </p>
-            <a
-              href="https://medium-git-main-akemnoor-singhs-projects.vercel.app/"
-              target="_blank"
-              className="inline-flex items-center mt-6 gap-1 mr-3 text-blue-500 hover:underline"
-            ><Image src={`/images/icons8-link-50.png`} width={20} height={20} alt="link" ></Image>
-              LINK
-            </a>
-            <a
-              href="https://github.com/the-akemsingh/AboveMedium"
-              target="_blank"
-              className="inline-flex items-center gap-1 text-blue-500 dark:text-gray-300 hover:underline"
-            ><Image src={`/images/icons8-github-30.png`} width={20} height={20} alt="GIthub" ></Image>
-              GITHUB
-            </a>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src={`/images/Welcome.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src={`/images/SignUp.jpg`} alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src={`/images/Signin.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src={`/images/Home.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Chat-App",
-      content: (
-        <div>
-          <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <p className="">
-              ✅ Start chat without logging in
-            </p>
-            <p className="">
-              ✅ Share invite code and invite more people to the chat
-            </p>
-            <a
-              href="https://chat-app.akemnoorsingh.me/"
-              target="_blank"
-              className="inline-flex items-center mt-6 gap-1 mr-3 text-blue-500 hover:underline"
-            ><Image src={`/images/icons8-link-50.png`} width={20} height={20} alt="link" ></Image>
-              LINK
-            </a>
-            <a
-              href="https://github.com/the-akemsingh/Chat-App"
-              target="_blank"
-              className="inline-flex items-center gap-1 text-blue-500 dark:text-gray-300 hover:underline"
-            >
-              <Image className="mt-6" src={`/images/icons8-github-30.png`} width={20} height={20} alt="link" ></Image>
-              <p className="mt-6">GITHUB</p>
-            </a>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src={`/images/ChatHome.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src={`/images/JoinRoom.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src={`/images/Chatbox.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "PayMoney",
-      content: (
-        <div>
-          <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <p className="">
-              ✅  Implemented the architecture of how payment apps works.
-            </p>
-            <p className="">
-              ✅  Developed a seperate bank webhook server that does the function of updating balances of users.
-            </p>
-            <p className="">
-              ✅The user done a transactoin, the webhook server is hit by bank that payment is received then the balances are updated.
-            </p>
-            <p className="">
-              *we need to hit webhook server manually (using Postman or any other tool)
-            </p>
-            <a
-              href="https://github.com/the-akemsingh/PayMoney"
-              target="_blank"
-              className="inline-flex items-center gap-1 text-blue-500 dark:text-gray-300 hover:underline"
-            >
-              <Image className="mt-6" src={`/images/icons8-github-30.png`} width={20} height={20} alt="link" ></Image>
-              <p className="mt-6">GITHUB</p>
-            </a>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src={`/images/Welcome12.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src={`/images/signup12.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src={`/images/transactions.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src={`/images/p2p.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src={`/images/addmoney.jpg`}
-              alt=""
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-  ];
-  return (
-    <div className="w-full">
-      <Timeline data={data} />
-    </div>
-  );
+interface Project {
+  title: string
+  description: string
+  features: string[]
+  links: {
+    demo?: string
+    github?: string
+  }
+  images: string[]
 }
+
+const projects: Project[] = [
+  {
+    title: "BachEats",
+    description: "People can connect with others over a meal",
+    features: [
+      "Share your meal with peoples nearby",
+      "Or join someone else for a meal"
+    ],
+    links: {
+      demo: "https://bach-eats.vercel.app/",
+      github: "https://github.com/the-akemsingh/Bach_Eats"
+    },
+    images: [
+      "/images/BEhome.jpg",
+      "/images/BEsignup.jpg",
+      "/images/BEinvite.jpg",
+      "/images/BEcreateinvite.jpg"
+    ]
+  },
+  {
+    title: "Above Medium",
+    description: "Blogging website",
+    features: [
+      "User sign-up using email",
+      "User has the functionality to post and view blogs posted by other users"
+    ],
+    links: {
+      demo: "https://medium-git-main-akemnoor-singhs-projects.vercel.app/",
+      github: "https://github.com/the-akemsingh/AboveMedium"
+    },
+    images: [
+      "/images/Welcome.jpg",
+      "/images/SignUp.jpg",
+      "/images/Signin.jpg",
+      "/images/Home.jpg"
+    ]
+  },
+  {
+    title: "Chat-App",
+    description: "Real-time chat application",
+    features: [
+      "Start chat without logging in",
+      "Share invite code and invite more people to the chat"
+    ],
+    links: {
+      demo: "https://chat-app.akemnoorsingh.me/",
+      github: "https://github.com/the-akemsingh/Chat-App"
+    },
+    images: [
+      "/images/ChatHome.jpg",
+      "/images/JoinRoom.jpg",
+      "/images/Chatbox.jpg"
+    ]
+  },
+  {
+    title: "PayMoney",
+    description: "Payment app architecture implementation",
+    features: [
+      "Implemented the architecture of how payment apps works",
+      "Developed a separate bank webhook server that updates balances of users",
+      "The user completes a transaction, the webhook server is hit by bank that payment is received then the balances are updated",
+    ],
+    links: {
+      github: "https://github.com/the-akemsingh/PayMoney"
+    },
+    images: [
+      "/images/Welcome12.jpg",
+      "/images/transactions.jpg",
+      "/images/p2p.jpg",
+      "/images/addmoney.jpg"
+    ]
+  }
+]
+
+export default function Projects() {
+  return (
+    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-4xl">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-2xl font-bold mb-8"
+        >
+          Projects
+        </motion.h2>
+
+        <div className="space-y-12">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-white rounded-lg shadow-md overflow-hidden"
+            >
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-sm text-gray-600 mb-4">{project.description}</p>
+
+                <div className="space-y-4">
+                  {/* Project Features */}
+                  <div className="space-y-2">
+                    {project.features.map((feature, i) => (
+                      <p key={i} className="text-sm text-gray-600 flex items-start">
+                        <span className="text-green-500 mr-2">✓</span>
+                        {feature}
+                      </p>
+                    ))}
+                  </div>
+
+                  {/* Project Links */}
+                  <div className="flex gap-4">
+                    {project.links.demo && (
+                      <Link 
+                        href={project.links.demo}
+                        className="inline-flex items-center gap-2 text-sm text-blue-500 hover:underline"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Demo
+                      </Link>
+                    )}
+                    {project.links.github && (
+                      <Link 
+                        href={project.links.github}
+                        className="inline-flex items-center gap-2 text-sm text-gray-600 hover:underline"
+                      >
+                        <Github className="w-4 h-4" />
+                        GitHub
+                      </Link>
+                    )}
+                  </div>
+
+                  {/* Project Images */}
+                  <div className="grid grid-cols-2 gap-4 mt-6">
+                    {project.images.map((image, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.2 + (i * 0.1) }}
+                      >
+                        <Image
+                          src={image}
+                          alt={`${project.title} screenshot ${i + 1}`}
+                          width={500}
+                          height={300}
+                          className="rounded-lg shadow-lg object-cover w-full h-40 md:h-52"
+                        />
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
