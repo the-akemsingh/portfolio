@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { ExternalLink, Github } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import TextFonts from '@/app/fonts/fonts'
 
 interface Project {
   title: string
@@ -97,9 +98,9 @@ export default function Projects() {
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-2xl font-bold mb-8"
+          className={`${TextFonts.JostFont.className} text-3xl font-bold mb-8`}
         >
-          Projects
+          My work
         </motion.h2>
 
         <div className="space-y-12">

@@ -1,6 +1,6 @@
 'use client'
 
-import TextFonts from '../../app/fonts/fonts'
+import TextFonts from '@/app/fonts/fonts'
 import { motion } from 'framer-motion'
 import { useTypingEffect } from '../../hooks/useTypingEffect'
 import { Github, Instagram, Linkedin, Twitter } from 'lucide-react'
