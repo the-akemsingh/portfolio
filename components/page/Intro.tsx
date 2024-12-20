@@ -1,16 +1,19 @@
 'use client'
 
+import TextFonts from '../../app/fonts/fonts'
 import { motion } from 'framer-motion'
 import { useTypingEffect } from '../../hooks/useTypingEffect'
 import { Github, Instagram, Linkedin, Twitter } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
+
+
+
 
 export default function Intro() {
   const typedText = useTypingEffect(['MERN', 'T3'], 100, 50, 1500)
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className={`min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8  `}>
       <div className="w-full max-w-4xl">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           <motion.div
@@ -20,7 +23,7 @@ export default function Intro() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-4xl font-bold mb-2"
+              className={`text-5xl font-bold mb-2 ${TextFonts.JostFont.className}`}
             >
               AKEMNOOR SINGH 
             </motion.h1>
@@ -69,7 +72,7 @@ export default function Intro() {
                 <li>• Proficient in <span className="font-semibold">{typedText}</span> stack</li>
                 <li>• Currently seeking part-time or full-time opportunities</li>
                 <li>• Engineering student at CGC</li>
-                <li>• Passionate about web development and AI applications</li>
+                <li>• Passionate about <span className={`text-xl ${TextFonts.YellowtailFont.className}`}> everything </span> </li>
               </ul>
             </motion.div>
           </motion.div>
