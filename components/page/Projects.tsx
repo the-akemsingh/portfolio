@@ -1,10 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, Github } from 'lucide-react'
+import {  Github } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import TextFonts from '@/app/fonts/fonts'
+import { CardBody, CardContainer, CardItem } from '../ui/3d-card'
 
 interface Project {
   title: string
@@ -30,10 +31,8 @@ const projects: Project[] = [
       github: "https://github.com/the-akemsingh/Bach_Eats"
     },
     images: [
-      "/images/BEhome.jpg",
-      "/images/BEsignup.jpg",
-      "/images/BEinvite.jpg",
-      "/images/BEcreateinvite.jpg"
+      "/images/1.jpg",
+
     ]
   },
   {
@@ -48,10 +47,8 @@ const projects: Project[] = [
       github: "https://github.com/the-akemsingh/AboveMedium"
     },
     images: [
-      "/images/Welcome.jpg",
-      "/images/SignUp.jpg",
-      "/images/Signin.jpg",
-      "/images/Home.jpg"
+      "/images/2.jpg",
+
     ]
   },
   {
@@ -66,9 +63,8 @@ const projects: Project[] = [
       github: "https://github.com/the-akemsingh/Chat-App"
     },
     images: [
-      "/images/ChatHome.jpg",
-      "/images/JoinRoom.jpg",
-      "/images/Chatbox.jpg"
+      "/images/3.jpg",
+
     ]
   },
   {
@@ -83,98 +79,91 @@ const projects: Project[] = [
       github: "https://github.com/the-akemsingh/PayMoney"
     },
     images: [
-      "/images/Welcome12.jpg",
-      "/images/transactions.jpg",
-      "/images/p2p.jpg",
-      "/images/addmoney.jpg"
+      "/images/4.jpg",
+
     ]
   }
 ]
 
 export default function Projects() {
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex  justify-center px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-4xl">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className={`${TextFonts.JostFont.className} text-3xl font-bold mb-8`}
+        <motion.h2
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className={`text-3xl font-bold mt-20 ${TextFonts.JostFont.className}`}
         >
-          My work
+          MY WORK
         </motion.h2>
-
-        <div className="space-y-12">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4"
+        >
           {projects.map((project, index) => (
             <motion.div
-              key={project.title}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              transition={{ delay: 0.2 * (index + 1), duration: 0.8 }}
             >
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-sm text-gray-600 mb-4">{project.description}</p>
-
-                <div className="space-y-4">
-                  {/* Project Features */}
-                  <div className="space-y-2">
-                    {project.features.map((feature, i) => (
-                      <p key={i} className="text-sm text-gray-600 flex items-start">
-                        <span className="text-green-500 mr-2">✓</span>
-                        {feature}
-                      </p>
-                    ))}
-                  </div>
-
-                  {/* Project Links */}
-                  <div className="flex gap-4">
+              <CardContainer className="inter-var">
+                <CardBody className="bg-gray-50 relative border-black/[0.1] w-full h-auto rounded-xl p-6 border">
+                  <CardItem
+                    translateZ="50"
+                    className="text-xl font-bold text-neutral-600"
+                  >
+                    {project.title}
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="60"
+                    className="text-neutral-500 text-sm max-w-sm mt-2"
+                  >
+                    {project.description}
+                  </CardItem>
+                  <CardItem translateZ="100" className="w-full mt-4">
+                    <Image
+                      src={project.images[0]}
+                      height="1000"
+                      width="1000"
+                      className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                      alt={`${project.title} thumbnail`}
+                    />
+                  </CardItem>
+                  <div className="flex justify-between items-center mt-4">
                     {project.links.demo && (
-                      <Link 
+                      <CardItem
+                        translateZ={20}
+                        as={Link}
                         href={project.links.demo}
-                        className="inline-flex items-center gap-2 text-sm text-blue-500 hover:underline"
+                        target="__blank"
+                        className="px-4 py-2 rounded-xl text-xs font-normal"
                       >
-                        <ExternalLink className="w-4 h-4" />
-                        Demo
-                      </Link>
+                        Demo →
+                      </CardItem>
                     )}
                     {project.links.github && (
-                      <Link 
+                      <CardItem
+                        translateZ={20}
+                        as={Link}
                         href={project.links.github}
-                        className="inline-flex items-center gap-2 text-sm text-gray-600 hover:underline"
+                        target="__blank"
+                        className="px-4 py-2 rounded-xl bg-black text-white text-xs font-bold"
                       >
-                        <Github className="w-4 h-4" />
                         GitHub
-                      </Link>
+                      </CardItem>
                     )}
                   </div>
-
-                  {/* Project Images */}
-                  <div className="grid grid-cols-2 gap-4 mt-6">
-                    {project.images.map((image, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.2 + (i * 0.1) }}
-                      >
-                        <Image
-                          src={image}
-                          alt={`${project.title} screenshot ${i + 1}`}
-                          width={500}
-                          height={300}
-                          className="rounded-lg shadow-lg object-cover w-full h-40 md:h-52"
-                        />
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+                </CardBody>
+              </CardContainer>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   )
 }
-
