@@ -3,7 +3,7 @@
 import TextFonts from '@/app/fonts/fonts'
 import { motion } from 'framer-motion'
 import { useTypingEffect } from '../../hooks/useTypingEffect'
-import { Github, Instagram, Linkedin, Twitter } from 'lucide-react'
+import { Github, Instagram, Linkedin, Twitter,Youtube, YoutubeIcon } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Intro() {
@@ -65,6 +65,13 @@ export default function Intro() {
                 className="text-gray-600 hover:text-gray-900"
               >
                 <Instagram className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://www.youtube.com/@AkmJustStarted"
+                target="_blank"
+                className="text-gray-600 hover:text-gray-900"
+              >
+                <YoutubeIcon className="w-5 h-5" />
               </Link>
             </motion.div>
 

@@ -18,7 +18,12 @@ const skills = [
   { src: "/images/tailwind.svg", alt: "tailwindCSS", label: "TailwindCSS" },
   { src: "/images/git.svg", alt: "git", label: "Git" },
   { src: "/images/github.svg", alt: "github", label: "GitHub" },
-  { src: "/images/postman.svg", alt: "postman", label: "Postman" }
+  { src: "/images/postman.svg", alt: "postman", label: "Postman" },
+  { src: "/images/nginx.svg", alt: "nginx", label: "Nginx" },
+  { src: "/images/aws.svg", alt: "aws", label: "AWS" },
+  { src: "/images/websockets.svg", alt: "websockets", label: "WebSockets" },
+  { src: "/images/html.svg", alt: "html", label: "HTML" },
+  { src: "/images/css.svg", alt: "css", label: "CSS" }
 ]
 
 export default function Skills() {
@@ -80,7 +85,7 @@ export default function Skills() {
             </motion.div>
           </motion.div>
         </motion.div>
-      </div>
+      </div>      
     </div>
   )
 }

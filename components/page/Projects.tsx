@@ -36,11 +36,10 @@ const projects: Project[] = [
     ]
   },
   {
-    title: "Above Medium",
+    title: "Real Wisdom",
     description: "Blogging website",
     features: [
-      "User sign-up using email",
-      "User has the functionality to post and view blogs posted by other users"
+      "Express thoughts and ideas to the world",
     ],
     links: {
       demo: "https://medium-git-main-akemnoor-singhs-projects.vercel.app/",
@@ -52,7 +51,7 @@ const projects: Project[] = [
     ]
   },
   {
-    title: "Chat-App",
+    title: "Yap-Yap",
     description: "Real-time chat application",
     features: [
       "Start chat without logging in",
@@ -71,7 +70,7 @@ const projects: Project[] = [
     title: "PayMoney",
     description: "Payment app architecture implementation",
     features: [
-      "Implemented the architecture of how payment apps works",
+      "Implemented the architecture of payment apps",
       "Developed a separate bank webhook server that updates balances of users",
       "The user completes a transaction, the webhook server is hit by bank that payment is received then the balances are updated",
     ],
@@ -81,6 +80,23 @@ const projects: Project[] = [
     images: [
       "/images/4.jpg",
 
+    ]
+  },
+  {
+    title: "VisionCraft",
+    description: "Free AI image generation/download - no signup required",
+    features: [
+      "Used black-forest-labs/FLUX.1-dev model to generate images by Hugging Face",
+      "No sign-up required, just generate images",
+      "The user can also download the generated image",
+     
+    ],
+    links: {
+      demo: "https://free-image-generator-bice.vercel.app/",
+      github: "https://github.com/the-akemsingh/Free-Image-Generator"
+    },
+    images: [
+      "/images/5.jpg",
     ]
   }
 ]
@@ -116,7 +132,7 @@ export default function Projects() {
                     translateZ="50"
                     className="text-xl font-bold text-neutral-600"
                   >
-                    {project.title}
+                    {project.title} <br /> {project.features[0]}
                   </CardItem>
                   <CardItem
                     as="p"
