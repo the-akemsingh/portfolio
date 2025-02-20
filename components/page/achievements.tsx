@@ -62,7 +62,7 @@ export default function Achievements() {
               </CardBody>
             </CardContainer>
             
-            <CardContainer className="inter-var">
+            {/* <CardContainer className="inter-var">
               <CardBody className="bg-gray-50 relative border-black/[0.1] w-full h-auto rounded-xl p-6 border">
                 <CardItem
                   translateZ="50"
@@ -92,7 +92,7 @@ export default function Achievements() {
                   </Link>
                 </CardItem>
               </CardBody>
-            </CardContainer>
+            </CardContainer> */}
   
             </motion.div>
           </motion.div>
