@@ -23,7 +23,8 @@ const skills = [
   { src: "/images/aws.svg", alt: "aws", label: "AWS" },
   { src: "/images/websockets.svg", alt: "websockets", label: "WebSockets" },
   { src: "/images/html.svg", alt: "html", label: "HTML" },
-  { src: "/images/css.svg", alt: "css", label: "CSS" }
+  { src: "/images/css.svg", alt: "css", label: "CSS" },
+  { src: "/images/redis.svg", alt: "redis", label: "Redis" }
 ]
 
 export default function Skills() {
@@ -59,7 +60,7 @@ export default function Skills() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6"
+              className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-5 gap-6"
             >
               {skills.map(({ src, alt, label }, index) => (
                 <motion.div

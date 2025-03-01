@@ -28,11 +28,24 @@ const projects: Project[] = [
     ],
     links: {
       demo: "https://bach-eats.vercel.app/",
-      github: "https://github.com/the-akemsingh/Bach_Eats"
+      github: "https://github.com/the-akemsingh/Bach_Eats",
     },
     images: [
       "/images/1.jpg",
-
+    ]
+  },
+  {
+    title: "Chess",
+    description: "Real-time multiplayer chess game",
+    features: [
+      "Play chess with your friends",
+    ],
+    links: {
+      demo: "https://chess-sigma-fawn.vercel.app/",
+      github: "https://github.com/the-akemsingh/Chess"
+    },
+    images: [
+      "/images/chess.jpg",
     ]
   },
   {
@@ -132,7 +145,10 @@ export default function Projects() {
                     translateZ="50"
                     className="text-xl font-bold text-neutral-600"
                   >
-                    {project.title} <br /> {project.features[0]}
+                    {project.title} {project.title==="BachEats"? <Link href={"https://www.producthunt.com/products/bacheats"} target='_blank' className='text-xs text-orange-400 ml-2 ' > ProductHunt→ </Link> :null }  
+                    <br /> {project.features[0]} <br /> {project.title==="BachEats" ? <div className='text-xs text-orange-400 m-2 '>
+                      #121 daily rank on ProductHunt among 1000+ products
+                    </div> : null }
                   </CardItem>
                   <CardItem
                     as="p"
