@@ -18,8 +18,8 @@ const experiences: Experience[] = [
     period: "March 2025 - Present",
     location: "Chandigarh",
     responsibilities: [
-      "Developed a scalable Learning Management System (LMS) using React, Node.js, Prisma, and AWS for secure course content delivery via CloudFront SignedURL",
-      "Integrated Razorpay for payments and implemented RBAC and modular course management"
+      "Working on a scalable Learning Management System (LMS) using React, Node.js, Prisma, and AWS for secure course content delivery via CloudFront SignedURL",
+      "Razorpay payment integration, RBAC and modular course management",
     ]
   }
 ]
