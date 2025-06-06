@@ -55,10 +55,10 @@ const WorkExperience = () => {
                   <h3 className="text-xl font-bold text-neutral-600">{experience.title}</h3>
                   <p className="text-neutral-500">{experience.company}</p>
                 </div>
-                <div className="text-right mt-2 md:mt-0">
+{/*                 <div className="text-right mt-2 md:mt-0">
                   <p className="text-neutral-500">{experience.period}</p>
                   <p className="text-neutral-500">{experience.location}</p>
-                </div>
+                </div> */}
               </div>
               <ul className="space-y-2 text-neutral-600">
                 {experience.responsibilities.map((responsibility, idx) => (
