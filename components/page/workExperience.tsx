@@ -15,7 +15,7 @@ const experiences: Experience[] = [
   {
     title: "Software Developer",
     company: "SacredMind Infotech",
-    period: "March 2025 - Present",
+    // period: "March 2025 - Present",
     location: "Chandigarh",
     responsibilities: [
       "Working on a scalable Learning Management System (LMS) using React, Node.js, Prisma, and AWS for secure course content delivery via CloudFront SignedURL",
