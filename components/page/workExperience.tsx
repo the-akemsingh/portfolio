@@ -6,7 +6,7 @@ import TextFonts from '@/app/fonts/fonts'
 interface Experience {
   title: string
   company: string
-  period: string
+  // period: string
   location: string
   responsibilities: string[]
 }
