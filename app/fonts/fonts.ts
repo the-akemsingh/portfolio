@@ -1,4 +1,4 @@
-import {Abril_Fatface, Cinzel, Jost, Patua_One, Rowdies, Yellowtail} from 'next/font/google';
+import {Azeret_Mono, Patua_One,  Yellowtail} from 'next/font/google';
 
 const JostFont=Patua_One({
     subsets:['latin'],
@@ -9,6 +9,15 @@ const YellowtailFont=Yellowtail({
     weight:'400'
 })
 
+const Azeret=Azeret_Mono({
+    subsets:['latin'],
+    weight:'400'
+})
+const AzeretM=Azeret_Mono({
+    subsets:['latin'],
+    weight:'500'
+})
 
-const TextFonts={JostFont,YellowtailFont}
+
+const TextFonts={JostFont,YellowtailFont,Azeret,AzeretM}
 export default TextFonts

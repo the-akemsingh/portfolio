@@ -29,7 +29,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <div className="min-h-fit mt-24 mb-24 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className=" flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-4xl">
         <motion.div
           initial={{ opacity: 0 }}
@@ -42,7 +42,7 @@ export default function Skills() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className={`text-3xl font-bold mb-2 ${TextFonts.JostFont.className}`}
+              className={`text-3xl font-bold text-[#FFA2A3] mb-2 ${TextFonts.AzeretM.className}`}
             >
               Skills
             </motion.h2>
@@ -51,7 +51,7 @@ export default function Skills() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-gray-600 mb-6"
+              className={`text-gray-300 mb-6 ${TextFonts.Azeret.className}`}
             >
               A comprehensive list of my technical proficiencies.
             </motion.p>
@@ -60,7 +60,7 @@ export default function Skills() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-5 gap-6"
+              className="flex flex-wrap gap-5"
             >
               {skills.map(({ src, alt, label }, index) => (
                 <motion.div
@@ -68,17 +68,8 @@ export default function Skills() {
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.1 * index, duration: 0.5 }}
-                  className="relative group flex flex-col items-center justify-center"
                 >
-                  <Image
-                    src={src}
-                    alt={alt}
-                    height={48}
-                    width={48}
-                    className="transition-transform duration-300 group-hover:scale-125"
-                    sizes="(max-width: 640px) 30px, (max-width: 768px) 40px, 48px"
-                  />
-                  <span className="mt-2 text-sm text-gray-600 group-hover:text-gray-900 transition-colors duration-300">
+                  <span className={`mt-2 text-sm text-[#111111]  px-1.5 py-1 rounded-lg bg-gray-300 group-hover:text-gray-900 transition-colors duration-300 ${TextFonts.Azeret.className}`}>
                     {label}
                   </span>
                 </motion.div>
@@ -86,7 +77,7 @@ export default function Skills() {
             </motion.div>
           </motion.div>
         </motion.div>
-      </div>      
+      </div>
     </div>
   )
 }

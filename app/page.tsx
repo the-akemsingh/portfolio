@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <Intro></Intro>
+      <Skills></Skills>
       <WorkExperience></WorkExperience>
       <Projects></Projects>
       <Achievements></Achievements>
-      <Skills></Skills>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   );
 }

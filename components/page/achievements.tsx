@@ -21,7 +21,7 @@ export default function Achievements() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className={`text-3xl font-bold mb-4 ${TextFonts.JostFont.className}`}
+              className={`text-3xl font-bold text-[#FFA2A3] ${TextFonts.AzeretM.className}`}
             >
               Achievements
             </motion.h2>
@@ -30,7 +30,7 @@ export default function Achievements() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-gray-600 mb-6"
+              className={`text-gray-300 ${TextFonts.Azeret.className}`}
             >
               Milestones I've accomplished along my journey.
             </motion.p>
@@ -47,7 +47,7 @@ export default function Achievements() {
               <CardBody className="bg-gray-50 relative border-black/[0.1] w-full h-auto rounded-xl p-6 border">
                 <CardItem
                   translateZ="50"
-                  className="text-xl font-bold text-neutral-600"
+                  className={`text-xl font-bold text-neutral-600 ${TextFonts.AzeretM.className}`}
                 >
                   InnoSprint Ideathon <br />
                   Chandigarh Group of Colleges Jhanjeri, S.A.S Nagar
@@ -55,7 +55,7 @@ export default function Achievements() {
                 <CardItem
                   as="p"
                   translateZ="60"
-                  className="text-neutral-500 text-sm max-w-sm mt-2"
+                  className={`text-neutral-500 text-sm max-w-sm mt-2 ${TextFonts.Azeret.className}`}
                 >
                   Proposed an innovative solution to help hawkers enhance their business growth. <br /> Ranked in the top 10 among 50 competing teams.
                 </CardItem>
