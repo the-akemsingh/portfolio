@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Inter, Instrument_Serif } from "next/font/google";
 
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Akemnoor Singh",
@@ -15,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/favicon.ico" />
-      <body className="bg-[#111111]">
+      <body className={`${inter.className}`}>
         {children}
       </body>
     </html>
