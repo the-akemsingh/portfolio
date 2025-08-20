@@ -6,7 +6,21 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Akemnoor Singh",
-  description: "Portfolio",
+  description: "Software Developer & Freelancer",
+  openGraph: {
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Akemnoor Singh - Software Developer & Freelancer',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og.png'],
+  },
 };
 
 export default function RootLayout({
