@@ -16,11 +16,7 @@ export const metadata: Metadata = {
         alt: 'Akemnoor Singh - Software Developer & Freelancer',
       }
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    images: ['/og.png'],
-  },
+  }
 };
 
 export default function RootLayout({
